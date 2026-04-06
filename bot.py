@@ -1,5 +1,11 @@
 import os, subprocess, asyncio, nest_asyncio
 nest_asyncio.apply()
+
+async def main():
+    # هذا السطر يشغل البوت كـ "مهمة" رسمية لتجنب خطأ الـ Timeout
+    await app.start()
+    print("البوت بدأ العمل بنجاح!")
+    await asyncio.Event().wait()
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
