@@ -86,5 +86,12 @@ async def process_video(client, callback_query):
         for f in [input_p, output_p]:
             if os.path.exists(f): os.remove(f)
 
-print("--- البوت المطور يعمل الآن بدون أخطاء المسارات ---")
-app.run()
+async def main():
+    await app.start()
+    print("--- البوت شغال الآن بنجاح ---")
+    await asyncio.Event().wait()
+
+if __name__ == "__main__":
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
+
