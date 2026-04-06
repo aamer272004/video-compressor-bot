@@ -1,4 +1,5 @@
-import os, subprocess, asyncio
+import os, subprocess, asyncio, nest_asyncio
+nest_asyncio.apply()
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
