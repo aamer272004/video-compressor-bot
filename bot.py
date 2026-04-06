@@ -82,9 +82,12 @@ async def start_bot():
     await app.start()
     print("--- البوت بدأ العمل الآن بنجاح ---")
     await asyncio.Event().wait()
-
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(start_bot())
+    try:
+        asyncio.run(start_bot())
+    except KeyboardInterrupt:
+        pass
+
+
 
 
