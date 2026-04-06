@@ -2,7 +2,7 @@ pyrogram
 tgcrypto
 nest-asyncio
 hachoir
-
+gunicorn
 
 
 
