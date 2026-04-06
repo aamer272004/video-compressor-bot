@@ -1,6 +1,8 @@
-import asyncio
-import nest_asyncio
-nest_asyncio.apply()
+pyrogram
+tgcrypto
+nest-asyncio
+hachoir
+
 
 
 
