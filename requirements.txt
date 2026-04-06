@@ -1,3 +1,4 @@
-pyrogram
+hachoir
 tgcrypto
-tg-asyncio
+python-telegram-bot
+
