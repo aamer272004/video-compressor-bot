@@ -83,10 +83,17 @@ async def start_bot():
     print("--- البوت بدأ العمل الآن بنجاح ---")
     await asyncio.Event().wait()
 if __name__ == "__main__":
-    try:
-        asyncio.run(start_bot())
-    except KeyboardInterrupt:
-        pass
+    import asyncio
+    from pyrogram import idle
+
+    async def main():
+        await app.start()
+        print("--- البوت بدأ العمل الآن بنجاح ---")
+        await idle()
+        await app.stop()
+
+    loop = asyncio.get_event_loop_policy().get_event_loop()
+    loop.run_until_complete(main())
 
 
 
