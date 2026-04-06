@@ -1,14 +1,7 @@
 import os, subprocess, asyncio, nest_asyncio
-nest_asyncio.apply()
-
-async def main():
-    # هذا السطر يشغل البوت كـ "مهمة" رسمية لتجنب خطأ الـ Timeout
-    await app.start()
-    print("البوت بدأ العمل بنجاح!")
-    await asyncio.Event().wait()
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
+nest_asyncio.apply()
 API_ID = 35816853
 API_HASH = "a9bfcd6d0b9a13c1dd4397b8509ba5db"
 BOT_TOKEN = "8762180978:AAExPp9UESEiRAclfYQ762HrzyEWrRSUnrs"
@@ -85,13 +78,13 @@ async def process_video(client, callback_query):
         # تنظيف الملفات بعد الانتهاء
         for f in [input_p, output_p]:
             if os.path.exists(f): os.remove(f)
-
-async def main():
+async def start_bot():
     await app.start()
-    print("--- البوت شغال الآن بنجاح ---")
+    print("--- البوت بدأ العمل الآن بنجاح ---")
     await asyncio.Event().wait()
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    loop.run_until_complete(start_bot())
+
 
